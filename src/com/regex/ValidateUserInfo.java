@@ -9,6 +9,12 @@ public class ValidateUserInfo {
 		String regex = "^[A-Z]{1}[a-z]{2,}$";
 		checkPattern(regex, firstName);
 	}
+	
+	public void lastName(String lastName){
+		//regex pattern
+		String regex = "^[A-Z]{1}[a-z]{2,}$";
+		checkPattern(regex, lastName);
+	}
 
 	//check regex pattern and input
 	public void checkPattern(String regexPattern, String userInput) {
