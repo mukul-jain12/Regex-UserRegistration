@@ -21,7 +21,13 @@ public class ValidateUserInfo {
         String regex = "^[a-zA-z0-9]+([.][0-9a-zA-z]+)*@[a-zA-z]+.[a-z]{2,3}([.][a-z]{2,3})*$";
         checkPattern(regex, emailId);
     }
-
+	
+	public void mobNum(String mobNum) {
+		//regex pattern
+        String regex = "^[0-9]{1,3}-[0-9]{10}$";
+        checkPattern(regex, mobNum);
+    }
+	
 	//check regex pattern and input
 	public void checkPattern(String regexPattern, String userInput) {
 		Pattern pattern = Pattern.compile(regexPattern);
