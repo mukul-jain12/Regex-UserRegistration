@@ -2,6 +2,10 @@ package com.regex;
 
 public class RegexUserRegistration {
 	public static void main(String args[]) {
-		System.out.println("Welcome to User Registration Problem");
+		//created user info object
+		UserInfo userInfo = new UserInfo();
+		
+		//calling method in UserInfo class
+		userInfo.userFirstName();
 	}
 }
