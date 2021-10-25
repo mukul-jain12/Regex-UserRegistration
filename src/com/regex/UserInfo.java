@@ -23,4 +23,13 @@ public class UserInfo {
 		//call firstName method in Validate class
 		validateInfo.lastName(lastName);
 	}
+	
+	public void userEmailId() {
+		//taking user input
+		System.out.println("Enter Your Email : ");
+		String emailID = sc.next();
+		
+		//call firstName method in Validate class
+		validateInfo.emailId(emailID);
+	}
 }
