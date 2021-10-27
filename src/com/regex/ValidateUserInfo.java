@@ -18,7 +18,7 @@ public class ValidateUserInfo {
 	
 	public boolean emailId(String emailId) {
 		//regex pattern
-        String regex = "^[a-zA-z0-9]+([.][0-9a-zA-z]+)*@[a-zA-z]+.[a-z]{2,3}([.][a-z]{2,3})*$";
+        String regex = "^[a-zA-Z0-9]+([._+-][0-9A-Za-z]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,4}([.][a-z]{2,4})?$";
         return checkPattern(regex, emailId);
     }
 	
