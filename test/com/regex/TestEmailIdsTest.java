@@ -49,9 +49,9 @@ public class TestEmailIdsTest {
 	}
 
 	@Test
-	public void givenEmailIds_withExpectedResult_shouldPassAllTheTestCases() {
-		ValidateUserInfo testEmailIds = new ValidateUserInfo();
-		boolean result = testEmailIds.emailId(this.emailIds);
+	public void TestEmailIds() {
+		ValidateUserInfo testEmail = new ValidateUserInfo();
+		boolean result = testEmail.emailId(this.emailIds);
 		Assert.assertEquals(this.expectedResult, result);
 	}
 }
