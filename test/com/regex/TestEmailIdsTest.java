@@ -53,7 +53,7 @@ public class TestEmailIdsTest {
 			String result = testEmail.emailId(this.emailIds);
 			Assert.assertEquals(this.expectedResult, result);
 		} catch ( UserRegistrationException e) {
-            Assert.assertEquals(UserRegistrationException.ExceptionType.INVALID_EMAIL_ID, e.type);
-        }
+			Assert.assertEquals(UserRegistrationException.ExceptionType.INVALID_EMAIL_ID, e.type);
+		}
 	}
 }
