@@ -10,8 +10,9 @@ public class ValidateUserInfo {
 		try {
             Pattern pattern = Pattern.compile(regex);
 
+            //checking input is empty or not
             if(firstName.isEmpty())
-                throw new UserRegistrationException("Please enter valid FIRST NAME!" , UserRegistrationException.ExceptionType.INVALID_FIRST_NAME);
+                throw new UserRegistrationException("Please enter valid First Name!" , UserRegistrationException.ExceptionType.INVALID_FIRST_NAME);
 
             Matcher matcher = pattern.matcher(firstName);
             if(matcher.matches()) {
@@ -21,7 +22,7 @@ public class ValidateUserInfo {
             	return "Sad";
             }
         } catch(Exception e) {
-            throw new UserRegistrationException("Please enter valid FIRST NAME!" , UserRegistrationException.ExceptionType.INVALID_FIRST_NAME);
+            throw new UserRegistrationException("Please enter valid First Name!" , UserRegistrationException.ExceptionType.INVALID_FIRST_NAME);
         }
 	}
 	
@@ -31,8 +32,9 @@ public class ValidateUserInfo {
 		try {
             Pattern pattern = Pattern.compile(regex);
 
+            //checking input is empty or not
             if(lastName.isEmpty())
-                throw new UserRegistrationException("Please enter valid FIRST NAME!" , UserRegistrationException.ExceptionType.INVALID_LAST_NAME);
+                throw new UserRegistrationException("Please enter valid Last Name!" , UserRegistrationException.ExceptionType.INVALID_LAST_NAME);
 
             Matcher matcher = pattern.matcher(lastName);
             if(matcher.matches()) {
@@ -42,7 +44,7 @@ public class ValidateUserInfo {
             	return "Sad";
             }
         } catch(Exception e) {
-            throw new UserRegistrationException("Please enter valid FIRST NAME!" , UserRegistrationException.ExceptionType.INVALID_LAST_NAME);
+            throw new UserRegistrationException("Please enter valid First Name!" , UserRegistrationException.ExceptionType.INVALID_LAST_NAME);
         }
 	}
 	
@@ -52,8 +54,9 @@ public class ValidateUserInfo {
         try {
             Pattern pattern = Pattern.compile(regex);
 
+            //checking input is empty or not
             if(emailId.isEmpty())
-                throw new UserRegistrationException("Please enter valid FIRST NAME!" , UserRegistrationException.ExceptionType.INVALID_EMAIL_ID);
+                throw new UserRegistrationException("Please enter valid Email ID!" , UserRegistrationException.ExceptionType.INVALID_EMAIL_ID);
 
             Matcher matcher = pattern.matcher(emailId);
             if(matcher.matches()) {
@@ -63,7 +66,7 @@ public class ValidateUserInfo {
             	return "Sad";
             }
         } catch(Exception e) {
-            throw new UserRegistrationException("Please enter valid FIRST NAME!" , UserRegistrationException.ExceptionType.INVALID_EMAIL_ID);
+            throw new UserRegistrationException("Please enter valid Email ID!" , UserRegistrationException.ExceptionType.INVALID_EMAIL_ID);
         }
     }
 	
@@ -72,9 +75,10 @@ public class ValidateUserInfo {
         String regex = "^[0-9]{1,3}-[0-9]{10}$";
         try {
             Pattern pattern = Pattern.compile(regex);
-
+            
+            //checking input is empty or not
             if(mobNum.isEmpty())
-                throw new UserRegistrationException("Please enter valid FIRST NAME!" , UserRegistrationException.ExceptionType.INVALID_MOBILE_NUMBER);
+                throw new UserRegistrationException("Please enter valid Mobile Number!" , UserRegistrationException.ExceptionType.INVALID_MOBILE_NUMBER);
 
             Matcher matcher = pattern.matcher(mobNum);
             if(matcher.matches()) {
@@ -84,7 +88,7 @@ public class ValidateUserInfo {
             	return "Sad";
             }
         } catch(Exception e) {
-            throw new UserRegistrationException("Please enter valid FIRST NAME!" , UserRegistrationException.ExceptionType.INVALID_MOBILE_NUMBER);
+            throw new UserRegistrationException("Please enter valid Mobile Number!" , UserRegistrationException.ExceptionType.INVALID_MOBILE_NUMBER);
         }
     }
 	
@@ -94,8 +98,9 @@ public class ValidateUserInfo {
         try {
             Pattern pattern = Pattern.compile(regex);
 
+            //checking input is empty or not
             if(pswrd.isEmpty())
-                throw new UserRegistrationException("Please enter valid FIRST NAME!" , UserRegistrationException.ExceptionType.INVALID_PASSWORD);
+                throw new UserRegistrationException("Please enter valid Password!" , UserRegistrationException.ExceptionType.INVALID_PASSWORD);
 
             Matcher matcher = pattern.matcher(pswrd);
             if(matcher.matches()) {
@@ -105,7 +110,7 @@ public class ValidateUserInfo {
             	return "Sad";
             }
         } catch(Exception e) {
-            throw new UserRegistrationException("Please enter valid FIRST NAME!" , UserRegistrationException.ExceptionType.INVALID_PASSWORD);
+            throw new UserRegistrationException("Please enter valid Password!" , UserRegistrationException.ExceptionType.INVALID_PASSWORD);
         }
     }
 }
