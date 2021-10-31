@@ -1,21 +1,19 @@
 package com.regex;
 
+import java.util.Arrays;
+import java.util.Collection;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
-import java.util.Arrays;
-import java.util.Collection;
-
-import static org.junit.Assert.*;
-
 @RunWith(Parameterized.class)
 public class TestEmailIdsTest {
 	private String emailIds;
-	private boolean expectedResult;
+	private String expectedResult;
 
-	public TestEmailIdsTest(String emailIds, boolean expectedResult) {
+	public TestEmailIdsTest(String emailIds, String expectedResult) {
 		this.emailIds = emailIds;
 		this.expectedResult = expectedResult;
 	}
@@ -49,9 +47,13 @@ public class TestEmailIdsTest {
 	}
 
 	@Test
-	public void TestEmailIds() {
-		ValidateUserInfo testEmail = new ValidateUserInfo();
-		String result = testEmail.emailId(this.emailIds);
-		Assert.assertEquals(this.expectedResult, result);
+	public void TestEmailIds() throws UserRegistrationException{
+		try {
+			ValidateUserInfo testEmail = new ValidateUserInfo();
+			String result = testEmail.emailId(this.emailIds);
+			Assert.assertEquals(this.expectedResult, result);
+		} catch ( UserRegistrationException e) {
+            Assert.assertEquals(UserRegistrationException.ExceptionType.INVALID_EMAIL_ID, e.type);
+        }
 	}
 }
